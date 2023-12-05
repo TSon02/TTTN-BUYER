@@ -15,9 +15,9 @@ class TitleTextWidget extends StatelessWidget {
     return Text(
       title,
       style: TextStyle(
-        fontSize: fontSize,
-        fontWeight: fontWeight,
-      ),
+          fontSize: fontSize,
+          fontWeight: fontWeight,
+          overflow: TextOverflow.ellipsis),
     );
   }
 }

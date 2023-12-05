@@ -182,10 +182,12 @@ class _DeliveryAddressScreenState extends State<DeliveryAddressScreen>
                                 title: 'Place Order',
                                 onClick: () {
                                   if (_index == null) {
+                                    print('message dsa');
                                     UIHelpers.showSnackBar(
                                         context: context,
                                         message: 'Please choose your address');
                                   } else {
+                                    print('message');
                                     PersistentNavBarNavigator.pushNewScreen(
                                       context,
                                       screen: PaymentScreen.provider(),

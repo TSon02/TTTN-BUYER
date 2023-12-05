@@ -18,9 +18,11 @@ class SubTitleWidget extends StatelessWidget {
       textAlign: isCenter ? TextAlign.center : null,
       subTitle,
       style: TextStyle(
-          fontSize: fontSize,
-          color: Colors.black.withOpacity(0.5),
-          fontWeight: fontWeight),
+        fontSize: fontSize,
+        color: Colors.black.withOpacity(0.5),
+        fontWeight: fontWeight,
+        overflow: TextOverflow.ellipsis,
+      ),
     );
   }
 }

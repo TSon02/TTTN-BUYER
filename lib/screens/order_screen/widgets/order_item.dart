@@ -77,9 +77,13 @@ class OrderItemWidgetState extends State<OrderItemWidget> {
                     TitleTextWidget(
                       title: product.productBrand,
                     ),
-                    SubTitleWidget(
-                      subTitle: product.productName,
-                      fontWeight: FontWeight.w600,
+                    SizedBox(
+                      width: 150,
+                      child: SubTitleWidget(
+                        subTitle: product.productName,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 13,
+                      ),
                     ),
                     SubTitleWidget(
                       subTitle: 'Quantity: $quantity',

@@ -122,6 +122,7 @@ class PaymentScreenState extends State<PaymentScreen> with AfterLayoutMixin {
 
                 case StatusType.loaded:
                   if (state.data!.cards.isEmpty) {
+                    print(state.data!.cards.length.toString());
                     return const Center(
                       child: Text(
                         'No products',

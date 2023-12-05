@@ -126,25 +126,31 @@ class _ProductItemState extends State<ProductItem> {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
-                          '\$${(price * quantity).toDouble()}',
-                          style: TextStyle(
-                            decoration: widget.product.coupon != null
-                                ? TextDecoration.lineThrough
-                                : TextDecoration.none,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
+                        SizedBox(
+                          width: 70,
+                          child: Text(
+                            '\$${(price * quantity).toDouble()}',
+                            style: TextStyle(
+                                decoration: widget.product.coupon != null
+                                    ? TextDecoration.lineThrough
+                                    : TextDecoration.none,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w700,
+                                overflow: TextOverflow.ellipsis),
                           ),
                         ),
                         widget.product.coupon != null
-                            ? TitleTextWidget(
-                                title: widget.product.coupon!.value
-                                        .contains('\$')
-                                    ? '\$${(price * quantity - quantity * stringToNumber(
-                                          value: widget.product.coupon!.value,
-                                        )).toDouble()}'
-                                    : '\$${(price * quantity - price * quantity * double.parse(widget.product.coupon!.value)).toDouble()}',
-                                fontSize: 18,
+                            ? SizedBox(
+                                width: 70,
+                                child: TitleTextWidget(
+                                  title: widget.product.coupon!.value
+                                          .contains('\$')
+                                      ? '\$${(price * quantity - quantity * stringToNumber(
+                                            value: widget.product.coupon!.value,
+                                          )).toDouble()}'
+                                      : '\$${(price * quantity - price * quantity * double.parse(widget.product.coupon!.value)).toDouble()}',
+                                  fontSize: 15,
+                                ),
                               )
                             : const SizedBox(),
                       ],
